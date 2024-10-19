@@ -1,0 +1,26 @@
+    1  mkdir server
+    2  cd server
+    3  npm init
+    4  mkdir notes
+    5  cd notes/
+    6  echo > commands.txt
+    7  cd ../../
+    8  history > history.txt
+    9  npm install express pg cors
+   10  cd server/
+   11  npm i express pg cors
+   12  cd ../
+   13  rmdir node_modules/
+   14  rm -r -f node_modules/
+   15  cd server/
+   16  touch index.js
+   17  nodemon -v
+   18  history > history.txt
+   19  rm history.txt 
+   20  history > ~/Documents/Preparação/Desenvolvimento/projetosJS/pern_to-do/history.txt 
+   21  nodemon index.js 
+   22  nodemon index.js
+   23  history > ~/Documents/Preparação/Desenvolvimento/projetosJS/pern_to-do/history.txt 
+   24  cd ../
+   25  touch > .gitignore
+   26  history > ~/Documents/Preparação/Desenvolvimento/projetosJS/pern_to-do/history.txt 
