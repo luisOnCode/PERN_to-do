@@ -13,3 +13,12 @@
    13  cd history/
    14  mv history.txt history-001.txt
    15  history > ~/Documents/Preparação/Desenvolvimento/projetosJS/pern_to-do/history/history-002.txt
+   16  cd ../
+   17  mvdir history/ command-history/
+   18  mv README.md README.backend.md
+   19  mv README.backend.md README-backend.md
+   20  mv README-backend.md README.backend.md
+   21  mv README.backend.md README.md
+   22  rm package.json
+   23  rm package-lock.json 
+   24  history > ~/Documents/Preparação/Desenvolvimento/projetosJS/pern_to-do/history/history-002.txt
