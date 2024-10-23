@@ -1,3 +1,0 @@
-mkdir server
-cd server
-npm init
