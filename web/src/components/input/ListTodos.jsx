@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import EditButton from './buttons/EditButton';
+
+import refreshingUpdatedTable from '../../util/refreshingUpdatedTable';
 
 function ListTodos() {
 
     const [todos, setTodos] = useState([]);
 
     const deleteTodo = async (id) => {
-        console.log(`test on ${id} button`)
         try {
             const deleteTodo = await fetch(`http://localhost:5000/todo/${id}`, {
                 method: "DELETE"
             });
 
-            console.log(deleteTodo);
+            setTodos(refreshingUpdatedTable("DELETE", todos, id))
         } catch (err) {
             console.error(err.message);
         }
@@ -46,9 +48,9 @@ function ListTodos() {
                     {todos.map(todo => (
                         <tr key={todo.todo_id}>
                             <td>{todo.description}</td>
-                            <td>Edit</td>
+                            <td><EditButton item={todo} list={todos} setList={setTodos} /></td>
                             <td><button onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
-                        </tr> 
+                        </tr>
                     ))
                     }
                 </tbody>
