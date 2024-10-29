@@ -1,49 +1,34 @@
 import React from "react";
-import refreshingUpdatedTable from "../../../util/refreshingUpdatedTable";
 
-const todoUpdatingOnDataBase = async (inputTextResponse, urlID) => {
+function giveMeThePrompt(changeThis) {
+    return window.prompt("Edit:", changeThis)
+}
+
+async function updateTheTodo(id, description) {
+    const jsonDescriptionUpdate = JSON.stringify({description: description})
     try {
-        const test = JSON.stringify({description: inputTextResponse})
-
-        const response = await fetch(`http://localhost:5000/todo/${urlID}`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: test
+        const response = await fetch(`http://localhost:5000/todo/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: jsonDescriptionUpdate
         })
 
-        console.log(response)
+        window.location = "/";
     } catch (err) {
-        console.error(err)
+        console.error(err.message);
     }
 }
 
-const userWantToUpdateToThis = (preFilled) => {
-    return window.prompt("Edit:", preFilled)
-}
-
-
-function EditButton({ item, list, setList}) { 
-    const editDescription = async e => {
+function EditButton({item}) {
+    const editTheTodo = async e => {
         e.preventDefault();
-        const gettingUpdatedString = userWantToUpdateToThis(item.description);
-        try {
-            const test = JSON.stringify({description: gettingUpdatedString})
-            const response = await fetch(`http://localhost:5000/todo/${item}`, {
-                method: "PUT",
-                headers: { "Content-Type": "application/json" },
-                body: test
-            })
-    
-            console.log(response)
-        } catch (err) {
-            console.error(err.message)
-        }
-        // refreshingUpdatedTable("UPDATE", list, item.id);
+        const promptStringResponse = giveMeThePrompt(item.description);
+        !(promptStringResponse && promptStringResponse !== item.description) ? promptStringResponse : updateTheTodo(item.todo_id, promptStringResponse)
     }
 
     return (
         <>
-           <button onClick={e => editDescription(e)}>Edit</button>
+           <button onClick={e => editTheTodo(e)}>Edit</button>
         </>
     )
 }

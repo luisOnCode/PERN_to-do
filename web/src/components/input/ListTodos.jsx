@@ -48,7 +48,7 @@ function ListTodos() {
                     {todos.map(todo => (
                         <tr key={todo.todo_id}>
                             <td>{todo.description}</td>
-                            <td><EditButton item={todo} list={todos} setList={setTodos} /></td>
+                            <td><EditButton item={todo}/></td>
                             <td><button onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
                         </tr>
                     ))
