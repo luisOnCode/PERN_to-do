@@ -1,4 +1,8 @@
 import React from "react";
+import SvgEditButton from "./svg/SvgEditButton";
+
+import './EditButton.css'
+
 
 function giveMeThePrompt(changeThis) {
     return window.prompt("Edit:", changeThis)
@@ -28,7 +32,7 @@ function EditButton({item}) {
 
     return (
         <>
-           <button onClick={e => editTheTodo(e)}>Edit</button>
+           <button onClick={e => editTheTodo(e)}><SvgEditButton /></button>
         </>
     )
 }

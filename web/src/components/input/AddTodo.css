@@ -1,0 +1,60 @@
+form {
+    width: 50%;
+    height: 6vh;
+    background-color: #414141;
+    border: none;
+    border-radius: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ContAddButton {
+    background-color: #414141;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.ContAddButton:hover {
+    background-color: rgb(61, 153, 61);
+}
+
+.CompAddButton {
+    height: 40%;
+    width: 40%;
+}
+
+input {
+    border: none;
+    outline: none;
+    height: 75%;
+    width: 80%;
+    padding: 5px;
+    background-color: #414141;
+    border-bottom: 1px solid #8D8D8D;
+    color: white;
+    transition: .2s;
+    text-align: center;
+}
+
+input:focus {
+    border-bottom: 1px solid white;
+}
+
+.svg-path {
+    transition: .2s;
+}
+
+.ContAddButton:hover .svg-path {
+    fill: white;
+}

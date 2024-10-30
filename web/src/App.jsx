@@ -7,10 +7,11 @@ import ListTodos from './components/input/ListTodos'
 
 function App() {
   return (
-    <>
+    <main>
+      <h1>PERN To-Do List</h1>
       <AddTodo />
       <ListTodos />
-    </>
+    </main>
   )
 }
 

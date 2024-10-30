@@ -1,0 +1,21 @@
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.EditButton-container {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+}
+
+.EditButton-svg {
+    width: 100%;
+    fill: #607BA3;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.EditButton-svg:hover {
+    fill: #69a5ff;
+}

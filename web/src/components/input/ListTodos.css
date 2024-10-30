@@ -1,0 +1,86 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 2vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+th, td {
+    padding: 0;
+    border: none;
+    margin: 0;
+    text-align: left;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+thead tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+tbody tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+thead tr th {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description-position {
+    width: 74%;
+    text-align: center;
+}
+
+.button-position {
+    width: 13%;
+
+}
+
+.button-position, .description-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+tbody {
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+tbody tr {
+    height: 9vh;
+    border: 1px solid #414141;
+    border-radius: 2vh;
+}
+
+.ContCheckButton {
+    height: 40%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #414141;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: .75vh;
+    transition: 0.15s ease-in-out;
+    color: #414141;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ContCheckButton:hover {
+    border: 1px solid rgb(61, 153, 61);
+    color: rgb(61, 153, 61);
+    font-weight: bold
+
+}
