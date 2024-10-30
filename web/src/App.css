@@ -23,3 +23,9 @@ h1 {
         width: 100vw;
     }
 }
+
+@media (max-aspect-ratio: 1 / 1) {
+    h1 {
+        font-size: 8vw;
+    }
+}

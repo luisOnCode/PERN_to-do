@@ -42,6 +42,16 @@ thead tr th {
     width: 74%;
     text-align: center;
     overflow: hidden;
+    transition: .2s ease-in-out;
+    
+}
+
+.description-position:hover {
+    overflow-y: auto;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .description-position div {
@@ -112,5 +122,15 @@ tbody tr {
     
     .buttonForm {
         height: 32%;
+    }
+}
+
+@media (max-aspect-ratio: 1 / 1) {
+    .description-position {
+        width: 60%;
+    }
+
+    .button-position {
+        width: 20%;
     }
 }
