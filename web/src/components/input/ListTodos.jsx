@@ -49,9 +49,9 @@ function ListTodos() {
                 <tbody>
                     {todos.map(todo => (
                         <tr key={todo.todo_id} className='todoContainer'>
-                            <td className='button-position CheckButton'><button className='ContCheckButton' onClick={() => checkTodo(todo.todo_id)}>✓</button></td>
+                            <td className='button-position CheckButton'><button className='ContCheckButton buttonForm' onClick={() => checkTodo(todo.todo_id)}>✓</button></td>
                             <td className='description-position'><div>{todo.description}</div></td>
-                            <td className='button-position'><div className='EditButton-container'><EditButton item={todo}/></div></td>
+                            <td className='button-position'><div className='EditButton-container buttonForm '><EditButton item={todo}/></div></td>
                         </tr>
                     ))}
                 </tbody>
